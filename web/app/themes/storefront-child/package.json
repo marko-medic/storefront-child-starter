@@ -1,0 +1,62 @@
+{
+  "name": "storefront-child",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "yarn development",
+    "development": "cross-env NODE_ENV=development mix watch",
+    "watch": "yarn development -- --watch",
+    "production": "cross-env NODE_ENV=production mix",
+    "prod": "yarn production",
+    "lint:prettier": "prettier sfc-assets/scripts/**/*.ts",
+    "lint:eslint": "eslint sfc-assets/scripts/**/*.ts --quiet --fix",
+    "test:cypress": "cypress open",
+    "precommit": "lint-staged"
+  },
+  "dependencies": {
+    "lodash": "^4.17.21"
+  },
+  "devDependencies": {
+    "@types/cypress": "^1.1.3",
+    "@types/jest": "^26.0.22",
+    "@types/jquery": "^3.5.5",
+    "@types/lodash": "^4.14.168",
+    "@typescript-eslint/eslint-plugin": "^4.21.0",
+    "@typescript-eslint/parser": "^4.21.0",
+    "babel-eslint": "10.0.0",
+    "browser-sync": "^2.26.14",
+    "browser-sync-webpack-plugin": "2.3.0",
+    "cross-env": "^7.0.3",
+    "cypress": "^7.0.1",
+    "eslint": "^7.23.0",
+    "eslint-config-prettier": "^8.1.0",
+    "eslint-config-react-app": "^6.0.0",
+    "eslint-plugin-flowtype": "5.2.0",
+    "eslint-plugin-import": "2.22.0",
+    "eslint-plugin-jsx-a11y": "6.3.1",
+    "eslint-plugin-prettier": "^3.3.1",
+    "eslint-plugin-react": "7.20.3",
+    "eslint-plugin-react-hooks": "4.0.8",
+    "laravel-mix": "^6.0.16",
+    "lint-staged": "8",
+    "husky": "4",
+    "postcss": "8.1",
+    "prettier": "^2.2.1",
+    "sass": "^1.32.8",
+    "sass-loader": "11.0.1",
+    "ts-loader": "^8.1.0",
+    "typescript": "^4.2.4"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn precommit"
+    }
+  }
+}
